@@ -1,18 +1,14 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <id>com.github.marcodestefani.gitlabplugin</id>
-    <name>gitlab-plugin</name>
+    <name>gitlab-deste</name>
     <vendor>marco-de-stefani</vendor>
 
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.marcodestefani.gitlabplugin.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.marcodestefani.gitlabplugin.services.MyProjectService"/>
+        <toolWindow id="Sample Calendar" secondary="true" icon="AllIcons.General.Modified" anchor="right"
+                    factoryClass="com.github.marcodestefani.gitlabplugin.factories.GitlabWindowBaseFactory"/>
     </extensions>
 
-    <applicationListeners>
-        <listener class="com.github.marcodestefani.gitlabplugin.listeners.MyProjectManagerListener"
-                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
-    </applicationListeners>
 </idea-plugin>
